@@ -10,7 +10,7 @@ CREATE DATABASE poke;
 # login(uid, uname, email, password)
 
 CREATE TABLE login(
-    uid         INT AUTO_INCREMENT,
+    uid         SMALLINT AUTO_INCREMENT,
     uname       VARCHAR(30) NOT NULL,
     email       VARCHAR(50) NOT NULL,
     password    CHAR(32) NOT NULL,
@@ -31,10 +31,10 @@ INSERT INTO login(uname, email, password) VALUES('Src123', 'td9940433@gmail.com'
 # score(uid, qid, hints_used, succeed)
 
 CREATE TABLE score(
-    uid INT,
-    qid INT,
-    hints_used SMALLINT NOT NULL DEFAULT 1,
-    solved SMALLINT DEFAULT -1, # -1 Undetermined, 1 Success, 0 Failure
+    uid SMALLINT,
+    qid SMALLINT,
+    hints_used TINYINT NOT NULL DEFAULT 1,
+    solved TINYINT DEFAULT -1, # -1 Undetermined, 1 Success, 0 Failure
 
     # constraints
 
@@ -70,7 +70,7 @@ INSERT INTO score(uid, qid) VALUES(1, 1);
 # quiz(qid, quiz1, quiz2, quiz3, quiz4, quiz5, ans)
 
 CREATE TABLE quiz(
-    qid             INT AUTO_INCREMENT,
+    qid             SMALLINT AUTO_INCREMENT,
     quiz1           VARCHAR(256) NOT NULL,
     quiz2           VARCHAR(256) NOT NULL,
     quiz3           VARCHAR(256) NOT NULL,
