@@ -4,7 +4,9 @@
 
 	// $start_date = mktime(0, 0, 0, 3, 31, 2024);
 
-	$start_date = mktime(0, 0, 0, 2, 20, 2024);
+	// $start_date = mktime(0, 0, 0, 2, 20, 2024);
+
+	$start_date = mktime(0, 0, 0, 4, 10, 2024);
 
 	$days_passed = (int)((time() - $start_date) / (24 * 3600));
 
