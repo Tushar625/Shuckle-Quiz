@@ -1,5 +1,10 @@
 
 @font-face {
+    font-family: Caveat;
+    src: url("../Caveat/Caveat-VariableFont_wght.ttf");
+}
+
+@font-face {
     font-family: Snell;
     src: url("../snell-roundhand/SnellBT-Bold.otf");
 }
@@ -36,6 +41,7 @@ html
 
 *, *::after, *::before
 {
+	font-family: Caveat;
     box-sizing: inherit;
     text-size-adjust: 150%; /* To prevent font resizing in android */
 }
